@@ -1,6 +1,6 @@
 <div align="center">
 
-# 🛡 SENTINEL
+# 🛡 ARGUS
 
 **Cybersecurity Consulting & Compliance Engineering — practice showcase**
 
@@ -16,7 +16,7 @@
 
 ## What this is
 
-SENTINEL is Dark Cloud Corp's consulting practice: **CMMC 2.0, IEC 62443, NIST SP 800-171, NERC CIP, and CNSA 2.0 post-quantum readiness** — engineered into operations by a veteran-led SDVOSB.
+ARGUS is Dark Cloud Corp's consulting practice: **CMMC 2.0, IEC 62443, NIST SP 800-171, NERC CIP, and CNSA 2.0 post-quantum readiness** — engineered into operations by a veteran-led SDVOSB.
 
 This repository hosts the **interactive practice showcase** — a client-side simulated assessment dashboard demonstrating how we scope, score, and roadmap engagements. **Sample data, illustrative only.**
 
@@ -54,7 +54,7 @@ flowchart LR
 | NIST 800-171 / DFARS | Control implementation, POA&M, SPR scoring prep |
 | NERC CIP | Asset classification, access controls, audit-ready evidence |
 | CNSA 2.0 / PQC | Crypto inventory, HNDL risk mapping, ML-KEM/ML-DSA migration roadmap |
-| Adversary validation | Delivered via [NIGHTFALL](https://github.com/WilBtc/red-team-ops) red-team engagements |
+| Adversary validation | Delivered via [TEMPEST-AI](https://github.com/WilBtc/red-team-ops) red-team engagements |
 | Managed operations | Delivered via [AEGIS](https://github.com/WilBtc/darkcloud-soc) AI SoC |
 
 ---
