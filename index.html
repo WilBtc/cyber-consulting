@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SENTINEL — Cybersecurity Consulting | Dark Cloud Corp</title>
+<meta name="description" content="SENTINEL — cybersecurity consulting & compliance readiness showcase by Dark Cloud Corp. CMMC 2.0, IEC 62443, NIST 800-171, CNSA 2.0. SDVOSB.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;700;800;900&family=Newsreader:ital,opsz,wght@0,6..72,300;1,6..72,400&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{--void:#06080d;--plate:#0b0f16;--steel:#10151f;--weld:#1a2230;--rivet:#2a3648;--light:#e8edf4;--smoke:#8b97a8;--ash:#5b6678;--slag:#3d4757;--cyan:#4dd8ff;--gold:#ffc845;--green:#34e8a4;--red:#ff5c7a;--amber:#ffb020;--display:'Schibsted Grotesk',system-ui,sans-serif;--body:'Newsreader',Georgia,serif;--mono:'JetBrains Mono',monospace;--max:1280px}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+body{font-family:var(--body);background:var(--void);color:var(--light);line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+body::after{content:'';position:fixed;inset:0;pointer-events:none;z-index:999;opacity:.03;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+a{color:var(--cyan);text-decoration:none}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 28px}
+nav{position:sticky;top:0;z-index:100;height:52px;background:rgba(6,8,13,.9);backdrop-filter:blur(16px);border-bottom:1px solid var(--weld)}
+nav .wrap{display:flex;justify-content:space-between;align-items:center;height:100%}
+.brand{font-family:var(--display);font-weight:900;font-size:15px;letter-spacing:-.4px;display:flex;align-items:center;gap:8px}
+.brand .dot{width:7px;height:7px;border-radius:50%;background:var(--gold);animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.5}}
+.nav-r{display:flex;gap:18px;font-family:var(--display);font-size:11px;font-weight:600;letter-spacing:.5px}
+.nav-r a{color:var(--smoke)}.nav-r a:hover{color:var(--gold)}
+header{padding:60px 0 36px}
+.tag{font-family:var(--mono);font-size:10px;letter-spacing:3px;text-transform:uppercase;color:var(--gold);display:flex;align-items:center;gap:8px;margin-bottom:14px}
+.tag::before{content:'';width:22px;height:1px;background:var(--gold)}
+h1{font-family:var(--display);font-size:clamp(34px,5vw,52px);font-weight:900;letter-spacing:-2px;line-height:1.05;margin-bottom:12px}
+h1 .accent{color:var(--gold)}
+.lead{font-size:16px;color:var(--smoke);max-width:640px;font-weight:300}
+.demo-note{font-family:var(--mono);font-size:10px;letter-spacing:1px;color:var(--gold);border:1px solid #ffc84544;background:#ffc84508;display:inline-block;padding:4px 10px;border-radius:2px;margin-top:14px}
+.grid{display:grid;grid-template-columns:1.15fr 1fr;gap:12px;margin:32px 0 12px}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:12px}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:12px}
+.panel{background:var(--plate);border:1px solid var(--weld);border-radius:6px;padding:18px;min-width:0}
+.panel h3{font-family:var(--display);font-size:12px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--smoke);margin-bottom:14px;display:flex;justify-content:space-between}
+/* framework bars */
+.fw{margin-bottom:16px}
+.fw .fl{display:flex;justify-content:space-between;font-family:var(--mono);font-size:10.5px;letter-spacing:1px;margin-bottom:6px}
+.fw .fl b{color:var(--light);font-weight:700}
+.fw .fl span{color:var(--smoke)}
+.fw .track{height:10px;background:var(--steel);border-radius:5px;overflow:hidden;position:relative}
+.fw .fill{height:100%;border-radius:5px;width:0;transition:width 1.6s cubic-bezier(.2,.8,.2,1)}
+.fw .note{font-family:var(--mono);font-size:9px;color:var(--slag);margin-top:4px;letter-spacing:.5px}
+/* radar */
+.radar svg{width:100%;height:auto;max-width:380px;display:block;margin:0 auto}
+/* roadmap tabs */
+.tabs{display:flex;gap:6px;margin-bottom:14px;flex-wrap:wrap}
+.tab{font-family:var(--mono);font-size:10px;letter-spacing:1px;padding:6px 14px;border:1px solid var(--rivet);border-radius:2px;color:var(--smoke);cursor:pointer;background:none;transition:.2s}
+.tab.on{border-color:var(--gold);color:var(--gold);background:#ffc84508}
+.phase{font-size:13.5px;color:var(--smoke);line-height:1.9}
+.phase b{color:var(--light)}
+.phase .k{color:var(--gold);font-family:var(--mono);font-size:10px;letter-spacing:1px}
+/* counters */
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:28px 0 0}
+.stat{background:var(--plate);border:1px solid var(--weld);border-radius:6px;padding:18px}
+.stat .num{font-family:var(--display);font-size:30px;font-weight:900;letter-spacing:-1px;color:var(--gold)}
+.stat .lbl{font-family:var(--mono);font-size:9px;letter-spacing:2px;text-transform:uppercase;color:var(--slag);margin-top:4px}
+.stat.c .num{color:var(--cyan)}.stat.g .num{color:var(--green)}.stat.r .num{color:var(--red)}
+/* packages */
+.pgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:24px}
+.pkg{background:var(--plate);border:1px solid var(--weld);border-radius:6px;padding:26px;position:relative;transition:.25s}
+.pkg:hover{transform:translateY(-4px)}
+.pkg.hotpkg{border-color:var(--gold)}
+.pkg .tier{font-family:var(--mono);font-size:9px;letter-spacing:2px;color:var(--slag);text-transform:uppercase}
+.pkg h3{font-family:var(--display);font-size:19px;font-weight:800;margin:6px 0 4px}
+.pkg .for{font-size:12.5px;color:var(--ash);font-style:italic;margin-bottom:14px}
+.pkg ul{list-style:none}
+.pkg li{font-size:13px;color:var(--smoke);padding:5px 0;border-bottom:1px solid var(--weld)}
+.pkg li::before{content:'▸';color:var(--gold);margin-right:8px}
+.pkg .hot-badge{position:absolute;top:-10px;right:14px;font-family:var(--mono);font-size:9px;letter-spacing:1px;background:var(--gold);color:var(--void);padding:3px 10px;border-radius:2px;font-weight:700}
+/* gap table */
+table{width:100%;border-collapse:collapse;font-size:12.5px}
+th{font-family:var(--mono);font-size:9px;letter-spacing:2px;text-transform:uppercase;color:var(--slag);text-align:left;padding:8px 10px;border-bottom:2px solid var(--rivet)}
+td{padding:9px 10px;border-bottom:1px solid var(--weld);color:var(--smoke)}
+.pill{font-family:var(--mono);font-size:9px;padding:2px 8px;border-radius:2px;letter-spacing:1px}
+.p-ok{background:#34e8a418;color:var(--green);border:1px solid #34e8a433}
+.p-wip{background:#ffb04518;color:var(--amber);border:1px solid #ffb04533}
+.p-gap{background:#ff5c7a18;color:var(--red);border:1px solid #ff5c7a33}
+.fgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:24px}
+.fcard{background:var(--plate);border:1px solid var(--weld);border-radius:6px;padding:22px;transition:.25s}
+.fcard:hover{border-color:var(--gold);transform:translateY(-3px)}
+.fcard h3{font-family:var(--display);font-size:15px;font-weight:700;margin-bottom:6px}
+.fcard p{font-size:13px;color:var(--smoke)}
+.fcard .ic{font-size:24px;margin-bottom:10px}
+footer{border-top:1px solid var(--weld);margin-top:40px;padding:28px 0;text-align:center}
+footer p{font-family:var(--mono);font-size:10px;letter-spacing:1px;color:var(--slag)}
+footer .gold{color:var(--gold)}
+.btn{font-family:var(--display);font-size:12px;font-weight:700;padding:11px 22px;border-radius:4px;display:inline-block;margin:0 6px 8px 0;transition:.25s}
+.btn-gold{background:var(--gold);color:var(--void)}.btn-gold:hover{background:#ffd76e}
+.btn-ghost{border:1px solid var(--rivet);color:var(--light)}.btn-ghost:hover{border-color:var(--smoke)}
+@media(max-width:860px){.grid,.grid2,.grid3,.pgrid,.fgrid{grid-template-columns:1fr}.stats{grid-template-columns:repeat(2,1fr)}}
+</style>
+</head>
+<body>
+<nav><div class="wrap">
+  <div class="brand"><span class="dot"></span> SENTINEL <span style="color:var(--slag);font-weight:400">// Dark Cloud Corp</span></div>
+  <div class="nav-r"><a href="https://wilbtc.github.io/darkcloudcorp/">Landing</a><a href="https://github.com/WilBtc/darkcloud-soc">AI SoC</a><a href="https://github.com/WilBtc/red-team-ops">Red Team</a></div>
+</div></nav>
+
+<header class="wrap">
+  <div class="tag">Cybersecurity Consulting &amp; Compliance Engineering</div>
+  <h1>Compliance, engineered.<br><span class="accent">Not performed.</span></h1>
+  <p class="lead">SENTINEL is Dark Cloud Corp's consulting practice: CMMC 2.0, IEC 62443, NIST 800-171, NERC CIP, and post-quantum readiness — built into your operations by veterans, not bolted on for an audit.</p>
+  <span class="demo-note">&#9888; SHOWCASE DEMO — SAMPLE ASSESSMENT DATA, ILLUSTRATIVE ONLY</span>
+</header>
+
+<div class="wrap">
+  <div class="stats">
+    <div class="stat"><div class="num" id="s1">0</div><div class="lbl">Controls Assessed</div></div>
+    <div class="stat g"><div class="num" id="s2">0</div><div class="lbl">Frameworks Delivered</div></div>
+    <div class="stat r"><div class="num" id="s3">0</div><div class="lbl">Gaps Closed / Qtr</div></div>
+    <div class="stat c"><div class="num" id="s4">0</div><div class="lbl">PQC Migration Items</div></div>
+  </div>
+
+  <div class="grid">
+    <div class="panel">
+      <h3><span>Framework Readiness — Sample Client</span><span style="font-family:var(--mono);font-size:9px;color:var(--gold);letter-spacing:1px">DAY 0 → DAY 90</span></h3>
+      <div id="fws">
+        <div class="fw"><div class="fl"><b>CMMC 2.0 Level 2</b><span class="v" data-v="72">0%</span></div><div class="track"><div class="fill" style="background:var(--gold)" data-w="72"></div></div><div class="note">NIST SP 800-171 · 110 CONTROLS · SSP + POA&amp;M DRAFTED</div></div>
+        <div class="fw"><div class="fl"><b>IEC 62443 SL-2</b><span class="v" data-v="64">0%</span></div><div class="track"><div class="fill" style="background:var(--cyan)" data-w="64"></div></div><div class="note">ZONES &amp; CONDUITS · SL TARGET POSTURE</div></div>
+        <div class="fw"><div class="fl"><b>NIST SP 800-171</b><span class="v" data-v="78">0%</span></div><div class="track"><div class="fill" style="background:var(--green)" data-w="78"></div></div><div class="note">DFARS 252.204-7012 ALIGNED</div></div>
+        <div class="fw"><div class="fl"><b>NERC CIP</b><span class="v" data-v="58">0%</span></div><div class="track"><div class="fill" style="background:var(--amber)" data-w="58"></div></div><div class="note">ASSET CLASSIFICATION · AUDIT-READY EVIDENCE</div></div>
+        <div class="fw"><div class="fl"><b>CNSA 2.0 (PQC)</b><span class="v" data-v="31">0%</span></div><div class="track"><div class="fill" style="background:var(--red)" data-w="31"></div></div><div class="note">CRYPTO INVENTORY · ML-KEM/ML-DSA ROADMAP</div></div>
+      </div>
+    </div>
+    <div class="panel">
+      <h3><span>Security Maturity — Radar</span></h3>
+      <div class="radar">
+        <svg viewBox="0 0 380 340" id="radar"></svg>
+      </div>
+    </div>
+  </div>
+
+  <div class="grid2">
+    <div class="panel">
+      <h3><span>Control Status — Top Domains</span></h3>
+      <table>
+        <thead><tr><th>Control Family</th><th>Status</th><th>Next Action</th></tr></thead>
+        <tbody id="ctrl">
+          <tr><td>Access Control (AC)</td><td><span class="pill p-wip">IN PROGRESS</span></td><td>MFA on privileged accounts</td></tr>
+          <tr><td>Audit &amp; Accountability (AU)</td><td><span class="pill p-ok">OPERATIONAL</span></td><td>Retain evidence 90d+</td></tr>
+          <tr><td>Incident Response (IR)</td><td><span class="pill p-gap">GAP</span></td><td>Author IR plan + tabletop</td></tr>
+          <tr><td>System &amp; Comms Protection (SC)</td><td><span class="pill p-wip">IN PROGRESS</span></td><td>PQC hybrid TLS pilot</td></tr>
+          <tr><td>Personnel Security (PS)</td><td><span class="pill p-ok">OPERATIONAL</span></td><td>Annual attestation</td></tr>
+          <tr><td>Risk Assessment (RA)</td><td><span class="pill p-gap">GAP</span></td><td>Crown-jewel data map</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="panel">
+      <h3><span>90-Day Roadmap</span></h3>
+      <div class="tabs">
+        <button class="tab on" data-p="0">DAYS 0–30</button>
+        <button class="tab" data-p="1">DAYS 31–60</button>
+        <button class="tab" data-p="2">DAYS 61–90</button>
+      </div>
+      <div class="phase" id="phase"></div>
+    </div>
+  </div>
+</div>
+
+<section class="wrap" style="padding-bottom:24px">
+  <h2 style="font-family:var(--display);font-size:clamp(26px,3.5vw,38px);font-weight:800;letter-spacing:-1px">Engagement packages</h2>
+  <div class="pgrid">
+    <div class="pkg">
+      <div class="tier">PACKAGE 01</div>
+      <h3>Assess</h3>
+      <div class="for">For teams that need to know where they stand</div>
+      <ul>
+        <li>Framework gap assessment (CMMC / 62443 / 800-171)</li>
+        <li>Crown-jewel data mapping</li>
+        <li>Threat-model workshop</li>
+        <li>Prioritized remediation roadmap</li>
+        <li>Executive risk briefing</li>
+      </ul>
+    </div>
+    <div class="pkg hotpkg">
+      <div class="hot-badge">MOST REQUESTED</div>
+      <div class="tier">PACKAGE 02</div>
+      <h3>Implement</h3>
+      <div class="for">For teams staring down a compliance deadline</div>
+      <ul>
+        <li>SSP, POA&amp;M &amp; control authorship</li>
+        <li>IEC 62443 zone &amp; conduit segmentation</li>
+        <li>Detection engineering (Sigma / Suricata)</li>
+        <li>CMMC 2.0 assessor-ready evidence</li>
+        <li>Pre-assessment dry run</li>
+      </ul>
+    </div>
+    <div class="pkg">
+      <div class="tier">PACKAGE 03</div>
+      <h3>Operate + PQC</h3>
+      <div class="for">For teams that need it to keep working</div>
+      <ul>
+        <li>Managed detection &amp; response</li>
+        <li>Purple-team cadence</li>
+        <li>CNSA 2.0 crypto inventory &amp; migration</li>
+        <li>Executive posture reporting</li>
+        <li>vCISO advisory hours</li>
+      </ul>
+    </div>
+  </div>
+
+  <h2 style="font-family:var(--display);font-size:clamp(26px,3.5vw,38px);font-weight:800;letter-spacing:-1px;margin-top:44px">Why Dark Cloud Corp</h2>
+  <div class="fgrid">
+    <div class="fcard"><div class="ic">&#127894;</div><h3>Veteran-Led, SDVOSB</h3><p>Service-disabled veteran-owned. Mission discipline in scoping, execution, and reporting. Set-aside and sole-source eligible.</p></div>
+    <div class="fcard"><div class="ic">&#9889;</div><h3>OT-Native Practice</h3><p>We speak Purdue, Modbus, and historian — not just office IT. IEC 62443 and NERC CIP delivered by engineers who've stood next to panels.</p></div>
+    <div class="fcard"><div class="ic">&#128301;</div><h3>Quantum-Horizon Ready</h3><p>CNSA 2.0 migration planning in every engagement: crypto inventory, harvest-now-decrypt-later risk, ML-KEM/ML-DSA roadmap.</p></div>
+  </div>
+
+  <div style="margin:32px 0">
+    <a class="btn btn-gold" href="https://wilbtc.github.io/darkcloudcorp/">Start the Conversation</a>
+    <a class="btn btn-ghost" href="https://github.com/WilBtc/cyber-consulting">GitHub</a>
+  </div>
+</section>
+
+<footer><div class="wrap">
+  <p class="gold">SDVOSB CERTIFIED — SERVICE-DISABLED VETERAN-OWNED SMALL BUSINESS</p>
+  <p>&copy; 2026 DARK CLOUD CORP · MIAMI, FL · <a href="https://github.com/WilBtc/cyber-consulting">REPO</a></p>
+</div></footer>
+
+<script>
+function anim(id,to,dur){const el=document.getElementById(id);const t0=performance.now();(function f(t){const p=Math.min((t-t0)/dur,1);el.textContent=Math.round(to*(0.4+0.6*p*p)).toLocaleString();if(p<1)requestAnimationFrame(f)})(t0)}
+anim('s1',110,1500);anim('s2',5,1400);anim('s3',43,1500);anim('s4',26,1500);
+
+// framework bars
+setTimeout(()=>{
+  document.querySelectorAll('.fill').forEach(f=>f.style.width=f.dataset.w+'%');
+  document.querySelectorAll('.v').forEach(s=>s.textContent=s.dataset.v+'%');
+},400);
+
+// radar
+const AXES=['IDENTIFY','PROTECT','DETECT','RESPOND','RECOVER'];
+const CX=190,CY=175,R=120;
+const svg=document.getElementById('radar');
+const cur=[.78,.62,.55,.42,.66];
+function pt(i,f){const a=-Math.PI/2+i*2*Math.PI/AXES.length;return [CX+R*f*Math.cos(a),CY+R*f*Math.sin(a)]}
+let g='';
+for(let ring=1;ring<=4;ring++){
+  g+='<polygon points="'+AXES.map((_,i)=>pt(i,ring/4).join(',')).join(' ')+'" fill="none" stroke="#1a2230"/>';
+}
+AXES.forEach((ax,i)=>{
+  const [x,y]=pt(i,1);const [lx,ly]=pt(i,1.24);
+  g+='<line x1="'+CX+'" y1="'+CY+'" x2="'+x+'" y2="'+y+'" stroke="#1a2230"/>';
+  g+='<text x="'+lx+'" y="'+ly+'" text-anchor="middle" fill="#5b6678" font-family="JetBrains Mono" font-size="9" letter-spacing="1">'+ax+'</text>';
+});
+g+='<polygon points="'+AXES.map((_,i)=>pt(i,cur[i]).join(',')).join(' ')+'" fill="#ffc84518" stroke="#ffc845" stroke-width="2" stroke-linejoin="round"/>';
+AXES.forEach((_,i)=>{const [x,y]=pt(i,cur[i]);g+='<circle cx="'+x+'" cy="'+y+'" r="4" fill="#ffc845"><animate attributeName="r" values="4;6;4" dur="2s" begin="'+(i*0.3)+'s" repeatCount="indefinite"/></circle>'});
+svg.innerHTML=g;
+
+// roadmap tabs
+const PHASES=[
+  '<span class="k">DAYS 0–30 — BASELINE</span><br><b>Scope & gap assessment:</b> framework gap analysis, crown-jewel data mapping, control-family scoring. Deliverables: gap register, risk-ranked roadmap, executive briefing.',
+  '<span class="k">DAYS 31–60 — ENGINEER</span><br><b>Close the big gaps:</b> SSP + POA&M authorship, segmentation design (62443 zones), detection engineering sprints, IR plan + tabletop exercise.',
+  '<span class="k">DAYS 61–90 — PROVE</span><br><b>Validate & operationalize:</b> pre-assessment dry run, purple-team validation of new detections, evidence packaging, managed-ops handoff or steady-state cadence.'
+];
+const ph=document.getElementById('phase');
+ph.innerHTML=PHASES[0];
+document.querySelectorAll('.tab').forEach(t=>t.addEventListener('click',()=>{
+  document.querySelectorAll('.tab').forEach(x=>x.classList.remove('on'));
+  t.classList.add('on');
+  ph.innerHTML=PHASES[+t.dataset.p];
+}));
+</script>
+</body>
+</html>
